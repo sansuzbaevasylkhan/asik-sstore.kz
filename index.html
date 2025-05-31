@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>asik-store.kz</title>
-  <link rel="icon" href="123.png" type="image/png"/>
+  <link rel="icon" href="123.png" type="image/png" />
   <style>
     body {
       margin: 0;
@@ -32,8 +32,6 @@
       color: white;
       font-size: 24px;
     }
-
-    /* Баннер суретпен */
     .banner {
       height: 300px;
       display: flex;
@@ -47,7 +45,6 @@
       background-size: cover;
       background-position: center;
     }
-
     .products {
       display: flex;
       flex-wrap: wrap;
@@ -81,12 +78,11 @@
       padding: 20px;
       font-family: 'Courier New', Courier, monospace;
       background-color: #666666;
-      user-select: none;
+      color: white;
     }
     .footer a {
       color: #ffffff;
       text-decoration: none;
-      font-weight: gold;
     }
     .footer a:hover {
       text-decoration: underline;
@@ -123,7 +119,7 @@
       flex-grow: 1;
     }
     .cart-item .order-btn {
-      background-color: #007bff;
+      background-color: #25D366;
       color: white;
       border: none;
       padding: 5px 10px;
@@ -135,158 +131,95 @@
 <body>
 
 <header>
-  <a href="index.html" class="logo">
+  <a href="#" class="logo">
     <img src="logo.png" alt="Asik Store Logo" style="height: 80px;" />
   </a>
   <button class="cart-btn" onclick="toggleCart()">🛒</button>
 </header>
 
-<div class="banner"></div>
+<div class="banner">Asik Store</div>
 
 <center>Кез келген заттарыңызды аласыздар!<br></center>
 
-<div class="products">
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 1" />
-    <div>Зат 1</div>
-    <div>5000 ₸</div>
-    <button onclick="addToCart('Зат 1', 5000, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 2" />
-    <div>Зат 2</div>
-    <div>7000 ₸</div>
-    <button onclick="addToCart('Зат 2', 7000, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 3" />
-    <div>Зат 3</div>
-    <div>8000 ₸</div>
-    <button onclick="addToCart('Зат 3', 8000, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 4" />
-    <div>Зат 4</div>
-    <div>6000 ₸</div>
-    <button onclick="addToCart('Зат 4', 6000, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 5" />
-    <div>Зат 5</div>
-    <div>9000 ₸</div>
-    <button onclick="addToCart('Зат 5', 9000, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 6" />
-    <div>Зат 6</div>
-    <div>7500 ₸</div>
-    <button onclick="addToCart('Зат 6', 7500, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 7" />
-    <div>Зат 7</div>
-    <div>8500 ₸</div>
-    <button onclick="addToCart('Зат 7', 8500, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 8" />
-    <div>Зат 8</div>
-    <div>6500 ₸</div>
-    <button onclick="addToCart('Зат 8', 6500, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 9" />
-    <div>Зат 9</div>
-    <div>5500 ₸</div>
-    <button onclick="addToCart('Зат 9', 5500, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 10" />
-    <div>Зат 10</div>
-    <div>7200 ₸</div>
-    <button onclick="addToCart('Зат 10', 7200, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 11" />
-    <div>Зат 11</div>
-    <div>6800 ₸</div>
-    <button onclick="addToCart('Зат 11', 6800, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 12" />
-    <div>Зат 12</div>
-    <div>7700 ₸</div>
-    <button onclick="addToCart('Зат 12', 7700, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 13" />
-    <div>Зат 13</div>
-    <div>5300 ₸</div>
-    <button onclick="addToCart('Зат 13', 5300, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 14" />
-    <div>Зат 14</div>
-    <div>6900 ₸</div>
-    <button onclick="addToCart('Зат 14', 6900, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
-  <div class="product">
-    <img src="https://via.placeholder.com/200" alt="Зат 15" />
-    <div>Зат 15</div>
-    <div>7100 ₸</div>
-    <button onclick="addToCart('Зат 15', 7100, 'https://via.placeholder.com/200')">Заказ беру</button>
-  </div>
+<div class="products" id="product-list">
+  <!-- JavaScript арқылы автоматты түрде тауарлар қосылады -->
 </div>
+
+<div class="cart-container" id="cart"></div>
 
 <div class="footer">
   <span>© 2025 Авторлық құқық қорғалған by </span>
-  <a href="instagram link" target="_blank" rel="noopener noreferrer">asik-store.kz</a>
+  <a href="https://instagram.com/asik-store.kz" target="_blank">asik-store.kz</a>
 </div>
 
-<div id="cart" class="cart-container"></div>
-
 <script>
+  const products = [
+    { name: "Зат 1", price: 5000, img: "https://via.placeholder.com/200" },
+    { name: "Зат 2", price: 7000, img: "https://via.placeholder.com/200" },
+    { name: "Зат 3", price: 8000, img: "https://via.placeholder.com/200" },
+    { name: "Зат 4", price: 6000, img: "https://via.placeholder.com/200" },
+    { name: "Зат 5", price: 9000, img: "https://via.placeholder.com/200" },
+    { name: "Зат 6", price: 7500, img: "https://via.placeholder.com/200" },
+    { name: "Зат 7", price: 8500, img: "https://via.placeholder.com/200" },
+    { name: "Зат 8", price: 6500, img: "https://via.placeholder.com/200" },
+    { name: "Зат 9", price: 5500, img: "https://via.placeholder.com/200" },
+    { name: "Зат 10", price: 7200, img: "https://via.placeholder.com/200" }
+  ];
+
   const cart = [];
 
+  function addToCart(name, price, img) {
+    cart.push({ name, price, img });
+    updateCart();
+    document.getElementById("cart").style.display = "block";
+  }
+
   function toggleCart() {
-    const cartBox = document.getElementById('cart');
-    if (cartBox.style.display === 'block') {
-      cartBox.style.display = 'none';
-    } else {
-      cartBox.style.display = 'block';
-      renderCart();
-    }
+    const cartBox = document.getElementById("cart");
+    cartBox.style.display = cartBox.style.display === "block" ? "none" : "block";
   }
 
-  function addToCart(name, price, image) {
-    cart.push({ name, price, image });
-    renderCart();
-  }
-
-  function renderCart() {
-    const cartBox = document.getElementById('cart');
-    if (cart.length === 0) {
-      cartBox.innerHTML = '<p>Себет бос</p>';
-      return;
-    }
-    cartBox.innerHTML = cart.map((item, index) => `
-      <div class="cart-item">
-        <img src="${item.image}" alt="${item.name}" />
-        <div class="info">
-          <div>${item.name}</div>
-          <div>${item.price} ₸</div>
+  function updateCart() {
+    const cartBox = document.getElementById("cart");
+    cartBox.innerHTML = "<h3>Себет</h3>";
+    cart.forEach((item, index) => {
+      cartBox.innerHTML += `
+        <div class="cart-item">
+          <img src="${item.img}" alt="${item.name}" />
+          <div class="info">
+            <div><strong>${item.name}</strong></div>
+            <div>${item.price} ₸</div>
+          </div>
+          <button class="order-btn" onclick="orderWhatsApp(${index})">Заказ беру</button>
         </div>
-        <button class="order-btn" onclick="orderItem('${item.name}', ${item.price})">Заказ беру</button>
-      </div>
-    `).join('');
+      `;
+    });
   }
 
-  function orderItem(name, price) {
-    const message = `Сәлеметсіз бе! Мен заказ беремін: ${name} - ${price} ₸`;
-    const url = `https://wa.me/7759718378?text=${encodeURIComponent(message)}`;
+  function orderWhatsApp(index) {
+    const item = cart[index];
+    const message = `Сәлеметсіз бе! Мен келесі затқа тапсырыс бергім келеді:%0A🛍 ${item.name}%0A💵 ${item.price} ₸%0A🖼 Сурет: ${item.img}`;
+    const phoneNumber = "77001234567"; // Мында өз WhatsApp нөміріңізді жазыңыз
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, '_blank');
   }
+
+  function loadProducts() {
+    const productList = document.getElementById("product-list");
+    products.forEach(product => {
+      const div = document.createElement("div");
+      div.className = "product";
+      div.innerHTML = `
+        <img src="${product.img}" alt="${product.name}" />
+        <div>${product.name}</div>
+        <div>${product.price} ₸</div>
+        <button onclick="addToCart('${product.name}', ${product.price}, '${product.img}')">Заказ беру</button>
+      `;
+      productList.appendChild(div);
+    });
+  }
+
+  loadProducts();
 </script>
 
 </body>
