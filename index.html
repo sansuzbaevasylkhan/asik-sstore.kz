@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>asik-store.kz</title>
+  <link rel="icon" href="123.png" type="image/png"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    .cart-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: white;
+      font-size: 24px;
+    }
+
+    /* Баннер суретпен */
+    .banner {
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      background-image: url('banner.png');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+    .product {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+      background-color: white;
+    }
+    .product img {
+      width: 100%;
+      height: auto;
+    }
+    .product button {
+      margin-top: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .footer {
+      text-align: center;
+      padding: 20px;
+      font-family: 'Courier New', Courier, monospace;
+      background-color: #666666;
+      user-select: none;
+    }
+    .footer a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: gold;
+    }
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    .cart-container {
+      position: fixed;
+      top: 60px;
+      right: 20px;
+      width: 300px;
+      max-height: 400px;
+      overflow-y: auto;
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 10px;
+      display: none;
+      z-index: 1000;
+    }
+    .cart-item {
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cart-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .cart-item .info {
+      flex-grow: 1;
+    }
+    .cart-item .order-btn {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">
+    <img src="logo.png" alt="Asik Store Logo" style="height: 80px;" />
+  </a>
+  <button class="cart-btn" onclick="toggleCart()">🛒</button>
+</header>
+
+<div class="banner"></div>
+
+<center>Кез келген заттарыңызды аласыздар!<br></center>
+
+<div class="products">
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 1" />
+    <div>Зат 1</div>
+    <div>5000 ₸</div>
+    <button onclick="addToCart('Зат 1', 5000, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 2" />
+    <div>Зат 2</div>
+    <div>7000 ₸</div>
+    <button onclick="addToCart('Зат 2', 7000, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 3" />
+    <div>Зат 3</div>
+    <div>8000 ₸</div>
+    <button onclick="addToCart('Зат 3', 8000, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 4" />
+    <div>Зат 4</div>
+    <div>6000 ₸</div>
+    <button onclick="addToCart('Зат 4', 6000, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 5" />
+    <div>Зат 5</div>
+    <div>9000 ₸</div>
+    <button onclick="addToCart('Зат 5', 9000, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 6" />
+    <div>Зат 6</div>
+    <div>7500 ₸</div>
+    <button onclick="addToCart('Зат 6', 7500, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 7" />
+    <div>Зат 7</div>
+    <div>8500 ₸</div>
+    <button onclick="addToCart('Зат 7', 8500, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 8" />
+    <div>Зат 8</div>
+    <div>6500 ₸</div>
+    <button onclick="addToCart('Зат 8', 6500, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 9" />
+    <div>Зат 9</div>
+    <div>5500 ₸</div>
+    <button onclick="addToCart('Зат 9', 5500, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 10" />
+    <div>Зат 10</div>
+    <div>7200 ₸</div>
+    <button onclick="addToCart('Зат 10', 7200, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 11" />
+    <div>Зат 11</div>
+    <div>6800 ₸</div>
+    <button onclick="addToCart('Зат 11', 6800, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 12" />
+    <div>Зат 12</div>
+    <div>7700 ₸</div>
+    <button onclick="addToCart('Зат 12', 7700, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 13" />
+    <div>Зат 13</div>
+    <div>5300 ₸</div>
+    <button onclick="addToCart('Зат 13', 5300, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 14" />
+    <div>Зат 14</div>
+    <div>6900 ₸</div>
+    <button onclick="addToCart('Зат 14', 6900, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+  <div class="product">
+    <img src="https://via.placeholder.com/200" alt="Зат 15" />
+    <div>Зат 15</div>
+    <div>7100 ₸</div>
+    <button onclick="addToCart('Зат 15', 7100, 'https://via.placeholder.com/200')">Заказ беру</button>
+  </div>
+</div>
+
+<div class="footer">
+  <span>© 2025 Авторлық құқық қорғалған by </span>
+  <a href="instagram link" target="_blank" rel="noopener noreferrer">asik-store.kz</a>
+</div>
+
+<div id="cart" class="cart-container"></div>
+
+<script>
+  const cart = [];
+
+  function toggleCart() {
+    const cartBox = document.getElementById('cart');
+    if (cartBox.style.display === 'block') {
+      cartBox.style.display = 'none';
+    } else {
+      cartBox.style.display = 'block';
+      renderCart();
+    }
+  }
+
+  function addToCart(name, price, image) {
+    cart.push({ name, price, image });
+    renderCart();
+  }
+
+  function renderCart() {
+    const cartBox = document.getElementById('cart');
+    if (cart.length === 0) {
+      cartBox.innerHTML = '<p>Себет бос</p>';
+      return;
+    }
+    cartBox.innerHTML = cart.map((item, index) => `
+      <div class="cart-item">
+        <img src="${item.image}" alt="${item.name}" />
+        <div class="info">
+          <div>${item.name}</div>
+          <div>${item.price} ₸</div>
+        </div>
+        <button class="order-btn" onclick="orderItem('${item.name}', ${item.price})">Заказ беру</button>
+      </div>
+    `).join('');
+  }
+
+  function orderItem(name, price) {
+    const message = `Сәлеметсіз бе! Мен заказ беремін: ${name} - ${price} ₸`;
+    const url = `https://wa.me/7759718378?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
