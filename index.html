@@ -145,7 +145,7 @@
   <button class="cart-btn" onclick="toggleCart()">🛒</button>
 </header>
 
-<div class="banner">Asik Store</div>
+<div class="banner"></div>
 
 <center style="padding: 10px;">Кез келген заттарыңызды аласыздар!<br></center>
 
@@ -160,12 +160,27 @@
 
 <script>
   const products = [
-    { name: "Iphone 15 pro max чехолы", price: 5000, img: "tauar1.png" },
-    { name: "Зат 2", price: 7000, img: "https://via.placeholder.com/200" },
-    { name: "Зат 3", price: 8000, img: "https://via.placeholder.com/200" },
-    { name: "Зат 4", price: 6000, img: "https://via.placeholder.com/200" },
-    { name: "Зат 5", price: 9000, img: "https://via.placeholder.com/200" }
-  ];
+  { name: "Iphone 15 pro max чехолы", price: 5000, img: "tauar1.png" },
+  { name: "AirPods қап", price: 3000, img: "https://via.placeholder.com/200" },
+  { name: "Samsung Galaxy S чехол", price: 4500, img: "https://via.placeholder.com/200" },
+  { name: "Ноутбук сөмкесі", price: 6000, img: "https://via.placeholder.com/200" },
+  { name: "Телефон тұғыршасы", price: 2000, img: "https://via.placeholder.com/200" },
+  { name: "Type-C кабель", price: 1500, img: "https://via.placeholder.com/200" },
+  { name: "Powerbank 10.000mAh", price: 8000, img: "https://via.placeholder.com/200" },
+  { name: "Bluetooth колонка", price: 10000, img: "https://via.placeholder.com/200" },
+  { name: "USB флешка 32GB", price: 2500, img: "https://via.placeholder.com/200" },
+  { name: "Монитор тазалаушы", price: 1200, img: "https://via.placeholder.com/200" },
+  { name: "Сымсыз тінтуір", price: 3500, img: "https://via.placeholder.com/200" },
+  { name: "Геймерге арналған кілемше", price: 1800, img: "https://via.placeholder.com/200" },
+  { name: "Көлік ұстағыш", price: 2200, img: "https://via.placeholder.com/200" },
+  { name: "Жылытқыш кружка", price: 4000, img: "https://via.placeholder.com/200" },
+  { name: "Apple Watch бауы", price: 2700, img: "https://via.placeholder.com/200" },
+  { name: "Iphone MagSafe", price: 9500, img: "https://via.placeholder.com/200" },
+  { name: "HDMI кабель", price: 2000, img: "https://via.placeholder.com/200" },
+  { name: "Жаңа жыл гирляндасы", price: 3300, img: "https://via.placeholder.com/200" },
+  { name: "Смарт шам", price: 5500, img: "https://via.placeholder.com/200" },
+  { name: "Түсті LED лента", price: 6000, img: "https://via.placeholder.com/200" }
+];
 
   const cart = [];
 
@@ -191,7 +206,7 @@
             <strong>${item.name}</strong><br>
             ${item.price} ₸
           </div>
-          <button class="order-btn" onclick="orderWhatsApp(${index})">Тапсырыс</button>
+          <button class="order-btn" onclick="orderWhatsApp(${index})">Тапсырыс беру</button>
         </div>
       `;
     });
